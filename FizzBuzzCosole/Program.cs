@@ -25,7 +25,10 @@
         try
         {
             int inpNumber = Int32.Parse(Console.ReadLine());
-            checkDivisibility(inpNumber);
+            if (inpNumber == 0)
+                Console.WriteLine("Number must be greater than '0'");
+            else
+                checkDivisibility(Math.Abs(inpNumber));
         }
         catch (FormatException)
         {
